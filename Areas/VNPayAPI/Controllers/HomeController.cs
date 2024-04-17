@@ -75,7 +75,6 @@ namespace VNPAYAPI.Areas.VNPayAPI.Controllers
                     //phản hồi không khớp với chữ ký
                     return Redirect("đường dẫn nếu phản hồi ko hợp lệ");
                 }
-
             }
             //phản hồi không hợp lệ
             return Redirect("LINK");
