@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.9.34723.18
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VNPAYAPI", "VNPAYAPI.csproj", "{4CE53A8C-DD14-4A98-BA0D-6318734BD611}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4CE53A8C-DD14-4A98-BA0D-6318734BD611}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4CE53A8C-DD14-4A98-BA0D-6318734BD611}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4CE53A8C-DD14-4A98-BA0D-6318734BD611}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4CE53A8C-DD14-4A98-BA0D-6318734BD611}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {7AD82E18-3562-4E40-86D1-6D91545509F3}
+	EndGlobalSection
+EndGlobal
