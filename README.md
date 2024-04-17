@@ -1,7 +1,7 @@
 <h1 align="center">
 Hướng dẫn sử dụng
 </h1>
-### Cho mình xin 1* nếu các bạn thích và sử dụng nó, cảm ơn
+## Cho mình xin 1* nếu các bạn thích và sử dụng nó, cảm ơn
 
 Sử dụng ```tmnCode``` và ```hashSecret``` mà VNPAY cấp cho các bạn, cổng phụ thuộc vào trang web(với đồ án chạy trên máy cá nhân xem ## Lấy cổng truy cập
 
