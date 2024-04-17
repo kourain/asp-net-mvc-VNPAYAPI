@@ -1,5 +1,3 @@
-## Cho mình xin 1* nếu các bạn thích và sử dụng nó, cảm ơn
-By Kourain
 <h1 align="center">
 Hướng dẫn sử dụng
 </h1>
