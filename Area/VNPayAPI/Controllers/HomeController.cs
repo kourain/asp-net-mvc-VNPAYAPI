@@ -63,21 +63,23 @@ namespace VNPAYAPI.Areas.VNPayAPI.Controllers
                     if (vnp_ResponseCode == "00")
                     {
                         //Thanh toán thành công
-                       return Redirect($"/user/Order/{orderId}&{vnpayTranId}&{orderInfor}");
+                       return Redirect("LINK");
                     }
                     else
                     {
                         //Thanh toán không thành công. Mã lỗi: vnp_ResponseCode
-                        return Redirect($"/user/Order/-1&{vnpayTranId}&{orderInfor}");
+                        return Redirect("LINK");
                     }
                 }
                 else
                 {
-                    return Redirect($"/user/Order/-1&-1&check_fail");
+                    //phản hồi không khớp với chữ ký
+                    return Redirect("đường dẫn nếu phản hồi ko hợp lệ");
                 }
 
             }
-            return Redirect($"/user/Order/-1&-10&return_data_fail");
+            //phản hồi không hợp lệ
+            return Redirect("LINK");
 
         }
         public bool ValidateSignature(string rspraw,string inputHash, string secretKey)
