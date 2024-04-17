@@ -32,7 +32,8 @@ tại Program.cs các bạn bổ sung
 
 ![image](https://github.com/kourain/VNPAYAPI/assets/85356599/10a0447f-1280-4388-82d0-2f1809018e84)
 
-``` app.MapControllerRoute(
+``` 
+app.MapControllerRoute(
       name: "areas",
       pattern: "{area:exists}/{controller=Home}/{action=Index}/{id?}"
     ); ```
