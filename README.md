@@ -1,5 +1,5 @@
 <h1 align="center">
-Plate
+Hướng dẫn sử dụng
 </h1>
 
 Sử dụng ```tmnCode``` và ```hashSecret``` mà VNPAY cấp cho các bạn, cổng phụ thuộc vào trang web(với đồ án chạy trên máy cá nhân xem ## Lấy cổng truy cập
