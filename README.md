@@ -2,7 +2,7 @@
 Hướng dẫn sử dụng
 </h1>
 
-Sử dụng ```tmnCode``` và ```hashSecret``` mà VNPAY cấp cho các bạn, cổng phụ thuộc vào trang web(với đồ án chạy trên máy cá nhân xem ## Lấy cổng truy cập
+Sử dụng ```tmnCode``` và ```hashSecret``` mà VNPAY cấp cho các bạn, cổng phụ thuộc vào trang web(với đồ án chạy trên máy cá nhân xem [Lấy cổng truy cập](https://github.com/kourain/asp-net-mvc-VNPAYAPI?tab=readme-ov-file#l%E1%BA%A5y-c%E1%BB%95ng-truy-c%E1%BA%ADp)
 
 ![image](https://github.com/kourain/VNPAYAPI/assets/85356599/12ddf7d9-4928-42d7-a007-bd3bfda80287)
 
