@@ -44,13 +44,12 @@ namespace VNPAYAPI.Areas.VNPayAPI.Controllers
         {
             if (Request.QueryString.HasValue)
             {
-                //https://localhost:44311/vnpayAPI/PaymentConfirm?vnp_Amount=7000000&vnp_BankCode=VNPAY&vnp_CardType=QRCODE&vnp_OrderInfo=netflix7d%2C&vnp_PayDate=20240417150614&vnp_ResponseCode=15&vnp_TmnCode=W0NBIFXR&vnp_TransactionNo=0&vnp_TransactionStatus=02&vnp_TxnRef=6&vnp_SecureHash=73267b3950f0a73ee084474a9d580939a0d3dccd794192a2c8989ce87cd09961dc34c923b428d0716d5a52d866a2dbba08fdb919445eab2d350687adb9cf34e2
                 //lấy toàn bộ dữ liệu trả về
                 var queryString = Request.QueryString.Value;
                 var json = HttpUtility.ParseQueryString(queryString);
 
                 long orderId = Convert.ToInt64(json["vnp_TxnRef"]); //mã hóa đơn
-                string orderInfor = json["vnp_OrderInfo"].ToString(); //mã hóa đơn
+                string orderInfor = json["vnp_OrderInfo"].ToString(); //Thông tin giao dịch
                 long vnpayTranId = Convert.ToInt64(json["vnp_TransactionNo"]); //mã giao dịch tại hệ thống VNPAY
                 string vnp_ResponseCode = json["vnp_ResponseCode"].ToString(); //response code: 00 - thành công, khác 00 - xem thêm https://sandbox.vnpayment.vn/apis/docs/bang-ma-loi/
                 string vnp_SecureHash = json["vnp_SecureHash"].ToString(); //hash của dữ liệu trả về
