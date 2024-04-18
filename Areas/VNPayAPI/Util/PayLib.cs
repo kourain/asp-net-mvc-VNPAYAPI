@@ -1,4 +1,5 @@
-﻿using System.Net;
+﻿using System.Globalization;
+using System.Net;
 using System.Security.Cryptography;
 using System.Text;
 
@@ -6,9 +7,7 @@ namespace VNPAYAPI.Areas.VNPayAPI.Util
 {
     public class PayLib
     {
-        protected SortedList<string, string> _requestData;
-
-        //------------------------REQUEST DATA----------------------------------------
+        private SortedList<String, String> _requestData = new SortedList<String, String>(new VnPayCompare());
         public void AddRequestData(string key, string value)
         {
             if (!String.IsNullOrEmpty(value))
@@ -41,6 +40,7 @@ namespace VNPAYAPI.Areas.VNPayAPI.Util
 
             return baseUrl;
         }
+
         public static String HmacSHA512(string key, String inputData)
         {
             var hash = new StringBuilder();
@@ -56,6 +56,17 @@ namespace VNPAYAPI.Areas.VNPayAPI.Util
             }
 
             return hash.ToString();
+        }
+    }
+    public class VnPayCompare : IComparer<string>
+    {
+        public int Compare(string x, string y)
+        {
+            if (x == y) return 0;
+            if (x == null) return -1;
+            if (y == null) return 1;
+            var vnpCompare = CompareInfo.GetCompareInfo("en-US");
+            return vnpCompare.Compare(x, y, CompareOptions.Ordinal);
         }
     }
 }

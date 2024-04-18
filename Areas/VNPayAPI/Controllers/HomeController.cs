@@ -16,7 +16,7 @@ namespace VNPAYAPI.Areas.VNPayAPI.Controllers
             return View();
         }
         [Route("/VNPayAPI/{amount}&{infor}&{orderinfor}")]
-        public ActionResult Payment(string amount,string infor,string orderinfor)
+        public ActionResult Payment(string amount, string infor, string orderinfor)
         {
             string hostName = System.Net.Dns.GetHostName();
             string clientIPAddress = System.Net.Dns.GetHostAddresses(hostName).GetValue(0).ToString();
@@ -35,7 +35,7 @@ namespace VNPAYAPI.Areas.VNPayAPI.Controllers
             pay.AddRequestData("vnp_OrderType", "other"); //topup: Nạp tiền điện thoại - billpayment: Thanh toán hóa đơn - fashion: Thời trang - other: Thanh toán trực tuyến
             pay.AddRequestData("vnp_ReturnUrl", returnUrl); //URL thông báo kết quả giao dịch khi Khách hàng kết thúc thanh toán
             pay.AddRequestData("vnp_TxnRef", orderinfor); //mã hóa đơn
-                                                                           
+
             string paymentUrl = pay.CreateRequestUrl(url, hashSecret);
             return Redirect(paymentUrl);
         }
@@ -62,7 +62,7 @@ namespace VNPAYAPI.Areas.VNPayAPI.Controllers
                     if (vnp_ResponseCode == "00")
                     {
                         //Thanh toán thành công
-                       return Redirect("LINK");
+                        return Redirect("LINK");
                     }
                     else
                     {
@@ -80,7 +80,7 @@ namespace VNPAYAPI.Areas.VNPayAPI.Controllers
             return Redirect("LINK");
 
         }
-        public bool ValidateSignature(string rspraw,string inputHash, string secretKey)
+        public bool ValidateSignature(string rspraw, string inputHash, string secretKey)
         {
             string myChecksum = PayLib.HmacSHA512(secretKey, rspraw);
             return myChecksum.Equals(inputHash, StringComparison.InvariantCultureIgnoreCase);
